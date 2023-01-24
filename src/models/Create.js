@@ -15,7 +15,7 @@ export default function Create(){
         e.preventDefault();
         axios.post('https://cors-everywhere.herokuapp.com/http://3.222.98.25/api/create.php',inputs, {
             headers: {
-              
+                'orgin':'http://3.222.98.25/api/create.php'
             }
           })
             .then(response => {
