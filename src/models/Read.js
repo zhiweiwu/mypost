@@ -4,7 +4,11 @@ import { Routes,Route,Link } from 'react-router-dom';
 export default function Read(){
     const[posts,setPosts]=useState([]);
     useEffect(()=>{
-        axios.get('https://34.228.65.41/api/read.php')
+        axios.get('https://cors-anywhere.herokuapp.com/34.228.65.41/api/read.php', {
+            headers: {
+              'orgin':'http://34.228.65.41/api/read.php'
+            }
+          })
         .then(res=>{
             console.log(res.data) 
             setPosts(res.data)
