@@ -4,7 +4,7 @@ import { Routes,Route,Link } from 'react-router-dom';
 export default function Read(){
     const[posts,setPosts]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:8081/mypost/api/read.php')
+        axios.get('http://34.228.65.41/api/read.php')
         .then(res=>{
             console.log(res.data) 
             setPosts(res.data)
