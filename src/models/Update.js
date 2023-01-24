@@ -13,7 +13,7 @@ export default function Update(){
     },[]);
 
     function getSinglePost(){
-        axios.get(`http://localhost:8081/mypost/api/read_single.php?id=${id}`)
+        axios.get(`http://34.228.65.41/api/read_single.php?id=${id}`)
         .then(res=>{
             console.log(res.data) 
             setInputs(res.data)
@@ -26,7 +26,7 @@ export default function Update(){
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
-        axios.put('http://localhost:8081/mypost/api/Update.php',inputs)
+        axios.put('http://34.228.65.41/api/Update.php',inputs)
             .then(response => {
               console.log(response.data) ;navigate('/read');
             }).catch(err=>console.log(err));

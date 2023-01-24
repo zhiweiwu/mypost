@@ -13,7 +13,7 @@ export default function Create(){
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8081/mypost/api/create.php',inputs, {
+        axios.post('http://34.228.65.41/api/create.php',inputs, {
             headers: {
               
             }

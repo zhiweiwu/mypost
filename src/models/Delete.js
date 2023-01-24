@@ -10,7 +10,7 @@ export default function Delete(){
     },[]);
 //currently using hard code but still show same error
  const deletePost=()=>{ 
-    axios.delete(`http://localhost:8081/mypost/api/delete.php/?id=${id}`)
+    axios.delete(`http://34.228.65.41/api/delete.php/?id=${id}`)
     .then(res=>{
      console.log(res.data)
      navigate('/read');
